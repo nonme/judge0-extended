@@ -7,7 +7,9 @@ x-logging:
 
 services:
   server:
-    build: .
+    build:
+      context: .
+      target: production
     image: nonme/judge0-extended:latest
     volumes:
       - ./judge0.conf:/judge0.conf:ro
@@ -18,7 +20,9 @@ services:
     restart: always
 
   worker:
-    build: .
+    build:
+      context: .
+      target: production
     image: nonme/judge0-extended:latest
     command: ["./scripts/workers"]
     volumes:
