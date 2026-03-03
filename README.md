@@ -32,6 +32,12 @@ Set passwords in `judge0.conf`:
 - `REDIS_PASSWORD` — generate a random password
 - `POSTGRES_PASSWORD` — generate another random password
 
+Go 1.18+ requires a higher file size limit for compilation. Set in `judge0.conf`:
+```
+MAX_FILE_SIZE=10240
+MAX_MAX_FILE_SIZE=10240
+```
+
 Start everything (first run builds the Docker image, takes a few minutes):
 
 ```bash
