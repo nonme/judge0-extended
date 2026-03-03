@@ -356,5 +356,29 @@
     id: 89,
     name: "Multi-file program",
     is_archived: false,
+  },
+  {
+    id: 95,
+    name: "Go (1.18.5)",
+    is_archived: false,
+    source_file: "main.go",
+    compile_cmd: "GOCACHE=/tmp/.cache/go-build /usr/local/go-1.18.5/bin/go build %s main.go",
+    run_cmd: "./main"
+  },
+  {
+    id: 106,
+    name: "Go (1.22.10)",
+    is_archived: false,
+    source_file: "main.go",
+    compile_cmd: "GOCACHE=/tmp/.cache/go-build /usr/local/go-1.22.10/bin/go build %s main.go",
+    run_cmd: "./main"
+  },
+  {
+    id: 107,
+    name: "Go (1.23.5)",
+    is_archived: false,
+    source_file: "main.go",
+    compile_cmd: "GOCACHE=/tmp/.cache/go-build /usr/local/go-1.23.5/bin/go build %s main.go",
+    run_cmd: "./main"
   }
 ]
