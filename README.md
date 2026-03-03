@@ -1,6 +1,6 @@
 # judge0-extended
 
-Fork of [judge0/judge0](https://github.com/judge0/judge0) CE v1.13.1 with additional Go versions. Language IDs are compatible with [ce.judge0.com](https://ce.judge0.com).
+Fork of [judge0/judge0](https://github.com/judge0/judge0) CE v1.13.1 with additional Go versions. Current release: **v1.13.1-extended.1**. Language IDs are compatible with [ce.judge0.com](https://ce.judge0.com).
 
 ## Added languages
 

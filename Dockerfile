@@ -52,7 +52,7 @@ RUN useradd -u 1000 -m -r judge0 && \
 
 USER judge0
 
-ENV JUDGE0_VERSION "1.13.1-extended"
+ENV JUDGE0_VERSION "1.13.1-extended.1"
 LABEL version=$JUDGE0_VERSION
 
 
