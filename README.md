@@ -1,6 +1,6 @@
 # judge0-extended
 
-Fork of [judge0/judge0](https://github.com/judge0/judge0) CE v1.13.1 with additional Go versions. Current release: **v1.13.1-extended.1**. Language IDs are compatible with [ce.judge0.com](https://ce.judge0.com).
+Fork of [judge0/judge0](https://github.com/judge0/judge0) CE v1.13.1 with updated Go and Python versions. Current release: **v1.13.1-extended.2**. Language IDs are compatible with [ce.judge0.com](https://ce.judge0.com).
 
 ## Added languages
 
@@ -10,6 +10,10 @@ Fork of [judge0/judge0](https://github.com/judge0/judge0) CE v1.13.1 with additi
 | 95 | Go (1.18.5) | First release with generics |
 | 106 | Go (1.22.10) | Compatible with ce.judge0.com id 106 |
 | 107 | Go (1.23.5) | Compatible with ce.judge0.com id 107 |
+| 70 | Python (2.7.17) | From upstream |
+| 71 | Python (3.8.1) | From upstream |
+| 100 | Python (3.12.13) | Compatible with ce.judge0.com id 100 |
+| 109 | Python (3.13.12) | Compatible with ce.judge0.com id 109 |
 
 All other languages are identical to upstream judge0 CE v1.13.1.
 

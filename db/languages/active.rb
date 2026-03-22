@@ -380,5 +380,19 @@
     source_file: "main.go",
     compile_cmd: "GOCACHE=/tmp/.cache/go-build /usr/local/go-1.23.5/bin/go build %s main.go",
     run_cmd: "./main"
+  },
+  {
+    id: 100,
+    name: "Python (3.12.13)",
+    is_archived: false,
+    source_file: "script.py",
+    run_cmd: "/usr/local/python-3.12.13/bin/python3 script.py"
+  },
+  {
+    id: 109,
+    name: "Python (3.13.12)",
+    is_archived: false,
+    source_file: "script.py",
+    run_cmd: "/usr/local/python-3.13.12/bin/python3 script.py"
   }
 ]

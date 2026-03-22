@@ -18,6 +18,21 @@ RUN cd /usr/local && \
     curl -fsSL https://go.dev/dl/go1.23.5.linux-amd64.tar.gz | tar xz && \
     mv go go-1.23.5
 
+# Install additional Python versions (built from source, same as judge0/compilers)
+RUN set -xe && \
+    for VERSION in 3.12.13 3.13.12; do \
+      curl -fSsL "https://www.python.org/ftp/python/$VERSION/Python-$VERSION.tar.xz" \
+        -o /tmp/python-$VERSION.tar.xz && \
+      mkdir /tmp/python-$VERSION && \
+      tar -xf /tmp/python-$VERSION.tar.xz -C /tmp/python-$VERSION --strip-components=1 && \
+      rm /tmp/python-$VERSION.tar.xz && \
+      cd /tmp/python-$VERSION && \
+      ./configure --prefix=/usr/local/python-$VERSION && \
+      make -j$(nproc) && \
+      make -j$(nproc) install && \
+      rm -rf /tmp/*; \
+    done
+
 ENV PATH "/usr/local/ruby-2.7.0/bin:/opt/.gem/bin:$PATH"
 ENV GEM_HOME "/opt/.gem/"
 
@@ -53,7 +68,7 @@ RUN useradd -u 1000 -m -r judge0 && \
 
 USER judge0
 
-ENV JUDGE0_VERSION "1.13.1-extended.1"
+ENV JUDGE0_VERSION "1.13.1-extended.2"
 LABEL version=$JUDGE0_VERSION
 
 
